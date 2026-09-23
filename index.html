@@ -1,0 +1,2190 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My IT Journey | Nurin</title>
+
+
+    <style>
+
+        /* =====================================================
+           GOOGLE FONT
+        ===================================================== */
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+
+        /* =====================================================
+           BODY
+        ===================================================== */
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+
+            background: #050816;
+
+            color: #ffffff;
+
+            overflow-x: hidden;
+
+        }
+
+
+        /* =====================================================
+           BACKGROUND GLOW
+        ===================================================== */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            width: 400px;
+
+            height: 400px;
+
+            background: #2563eb;
+
+            filter: blur(180px);
+
+            opacity: 0.18;
+
+            top: -100px;
+
+            left: -100px;
+
+            z-index: -1;
+
+        }
+
+
+        body::after {
+
+            content: "";
+
+            position: fixed;
+
+            width: 350px;
+
+            height: 350px;
+
+            background: #06b6d4;
+
+            filter: blur(180px);
+
+            opacity: 0.12;
+
+            bottom: -100px;
+
+            right: -100px;
+
+            z-index: -1;
+
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        nav {
+
+            position: fixed;
+
+            top: 20px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            z-index: 999;
+
+        }
+
+
+        nav ul {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 5px;
+
+            list-style: none;
+
+            padding: 12px;
+
+            background: rgba(15, 23, 42, 0.75);
+
+            backdrop-filter: blur(20px);
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            border-radius: 50px;
+
+            box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+
+        }
+
+
+        nav a {
+
+            color: #cbd5e1;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            padding: 10px 15px;
+
+            border-radius: 30px;
+
+            transition: 0.3s;
+
+        }
+
+
+        nav a:hover {
+
+            color: white;
+
+            background: #2563eb;
+
+            box-shadow: 0 0 20px rgba(37,99,235,0.5);
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        #home {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 120px 20px 60px;
+
+            position: relative;
+
+        }
+
+
+        .hero {
+
+            max-width: 900px;
+
+        }
+
+
+        .hello {
+
+            color: #60a5fa;
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(55px, 9vw, 100px);
+
+            font-weight: 800;
+
+            line-height: 1;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #60a5fa,
+                    #22d3ee,
+                    #818cf8
+                );
+
+            -webkit-background-clip: text;
+
+            color: transparent;
+
+            text-shadow:
+                0 0 50px rgba(37,99,235,0.25);
+
+        }
+
+
+        .hero h2 {
+
+            font-size: 25px;
+
+            margin-top: 20px;
+
+            color: #e2e8f0;
+
+            font-weight: 500;
+
+        }
+
+
+        .hero p {
+
+            max-width: 700px;
+
+            margin: 20px auto;
+
+            color: #94a3b8;
+
+            line-height: 1.9;
+
+        }
+
+
+        /* =====================================================
+           PROFILE IMAGE
+        ===================================================== */
+
+        .profile-wrapper {
+
+            position: relative;
+
+            width: 170px;
+
+            height: 170px;
+
+            margin: 30px auto;
+
+        }
+
+
+        .profile-wrapper::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: -8px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    45deg,
+                    #2563eb,
+                    #22d3ee,
+                    #8b5cf6
+                );
+
+            animation: rotate 5s linear infinite;
+
+        }
+
+
+        .profile {
+
+            position: relative;
+
+            width: 170px;
+
+            height: 170px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 5px solid #050816;
+
+        }
+
+
+        @keyframes rotate {
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
+
+        .buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            margin-top: 30px;
+
+        }
+
+
+        .btn {
+
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        .btn-primary {
+
+            background: #2563eb;
+
+            color: white;
+
+            box-shadow:
+                0 0 25px rgba(37,99,235,0.35);
+
+        }
+
+
+        .btn-primary:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 0 35px rgba(37,99,235,0.6);
+
+        }
+
+
+        .btn-outline {
+
+            border: 1px solid #475569;
+
+            color: #e2e8f0;
+
+        }
+
+
+        .btn-outline:hover {
+
+            border-color: #60a5fa;
+
+            color: #60a5fa;
+
+        }
+
+
+        /* =====================================================
+           SCROLL TEXT
+        ===================================================== */
+
+        .scroll {
+
+            position: absolute;
+
+            bottom: 25px;
+
+            color: #64748b;
+
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+        }
+
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        section {
+
+            padding: 100px 7%;
+
+            position: relative;
+
+        }
+
+
+        .container {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+        }
+
+
+        .title {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+
+        }
+
+
+        .title span {
+
+            color: #60a5fa;
+
+            font-size: 13px;
+
+            letter-spacing: 3px;
+
+            font-weight: 600;
+
+        }
+
+
+        .title h2 {
+
+            font-size: 42px;
+
+            margin-top: 8px;
+
+        }
+
+
+        .title p {
+
+            color: #64748b;
+
+            margin-top: 10px;
+
+        }
+
+
+        /* =====================================================
+           GLASS CARD
+        ===================================================== */
+
+        .glass {
+
+            background:
+                rgba(15, 23, 42, 0.65);
+
+            backdrop-filter: blur(20px);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            border-radius: 25px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.25);
+
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns: 0.8fr 1.5fr;
+
+            gap: 30px;
+
+            align-items: center;
+
+        }
+
+
+        .about-photo {
+
+            text-align: center;
+
+        }
+
+
+        .about-photo img {
+
+            width: 280px;
+
+            height: 280px;
+
+            object-fit: cover;
+
+            border-radius: 30px;
+
+            border: 1px solid #334155;
+
+        }
+
+
+        .about-content h3 {
+
+            color: #60a5fa;
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .about-content p {
+
+            color: #94a3b8;
+
+            line-height: 1.9;
+
+        }
+
+
+        .info {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+
+            margin-top: 25px;
+
+        }
+
+
+        .info-box {
+
+            padding: 15px;
+
+            background: rgba(30,41,59,0.7);
+
+            border-radius: 15px;
+
+            border: 1px solid #334155;
+
+        }
+
+
+        .info-box small {
+
+            color: #64748b;
+
+        }
+
+
+        .info-box strong {
+
+            display: block;
+
+            color: #e2e8f0;
+
+            margin-top: 3px;
+
+        }
+
+
+        /* =====================================================
+           SKILLS
+        ===================================================== */
+
+        .skills-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+
+        }
+
+
+        .skill {
+
+            padding: 25px;
+
+            background: rgba(15,23,42,0.7);
+
+            border: 1px solid #1e293b;
+
+            border-radius: 20px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .skill:hover {
+
+            transform: translateY(-5px);
+
+            border-color: #2563eb;
+
+        }
+
+
+        .skill-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .skill-top h3 {
+
+            color: #e2e8f0;
+
+        }
+
+
+        .skill-top span {
+
+            color: #60a5fa;
+
+        }
+
+
+        .bar {
+
+            height: 8px;
+
+            background: #1e293b;
+
+            border-radius: 20px;
+
+        }
+
+
+        .bar span {
+
+            display: block;
+
+            height: 100%;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #2563eb,
+                    #22d3ee
+                );
+
+            animation: loading 2s ease;
+
+        }
+
+
+        @keyframes loading {
+
+            from {
+                width: 0;
+            }
+
+        }
+
+
+        /* =====================================================
+           EDUCATION TIMELINE
+        ===================================================== */
+
+        .timeline {
+
+            position: relative;
+
+            max-width: 800px;
+
+            margin: auto;
+
+        }
+
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 15px;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 2px;
+
+            background: #2563eb;
+
+        }
+
+
+        .timeline-item {
+
+            position: relative;
+
+            padding-left: 55px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .timeline-dot {
+
+            position: absolute;
+
+            left: 7px;
+
+            top: 5px;
+
+            width: 18px;
+
+            height: 18px;
+
+            border-radius: 50%;
+
+            background: #2563eb;
+
+            box-shadow:
+                0 0 20px #2563eb;
+
+        }
+
+
+        .timeline-item h3 {
+
+            color: #60a5fa;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .timeline-item p {
+
+            color: #94a3b8;
+
+        }
+
+
+        /* =====================================================
+           PROJECTS
+        ===================================================== */
+
+        .projects {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .project {
+
+            overflow: hidden;
+
+            border-radius: 22px;
+
+            background: #0f172a;
+
+            border: 1px solid #1e293b;
+
+            transition: 0.4s;
+
+        }
+
+
+        .project:hover {
+
+            transform: translateY(-10px);
+
+            border-color: #2563eb;
+
+            box-shadow:
+                0 20px 40px rgba(37,99,235,0.15);
+
+        }
+
+
+        .project img {
+
+            width: 100%;
+
+            height: 200px;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+
+        }
+
+
+        .project:hover img {
+
+            transform: scale(1.05);
+
+        }
+
+
+        .project-content {
+
+            padding: 25px;
+
+        }
+
+
+        .project-content h3 {
+
+            color: #60a5fa;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .project-content p {
+
+            color: #94a3b8;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+        }
+
+
+        .project-link {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            color: #60a5fa;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           ACHIEVEMENTS
+        ===================================================== */
+
+        .achievements {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .achievement {
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(30,41,59,0.7),
+                    rgba(15,23,42,0.7)
+                );
+
+            border: 1px solid #1e293b;
+
+            transition: 0.3s;
+
+        }
+
+
+        .achievement:hover {
+
+            transform: translateY(-7px);
+
+            border-color: #2563eb;
+
+        }
+
+
+        .achievement .icon {
+
+            font-size: 45px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .achievement h3 {
+
+            color: #60a5fa;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .achievement p {
+
+            color: #94a3b8;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           CAREER
+        ===================================================== */
+
+        .career {
+
+            text-align: center;
+
+            padding: 60px 30px;
+
+            border-radius: 30px;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #1d4ed8,
+                    #0f172a 60%
+                );
+
+            border: 1px solid #2563eb;
+
+            box-shadow:
+                0 0 60px rgba(37,99,235,0.12);
+
+        }
+
+
+        .career h3 {
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .career p {
+
+            max-width: 750px;
+
+            margin: auto;
+
+            color: #cbd5e1;
+
+            line-height: 1.9;
+
+        }
+
+
+        /* =====================================================
+           AUDIO & VIDEO
+        ===================================================== */
+
+        .media {
+
+            margin-top: 35px;
+
+        }
+
+
+        audio {
+
+            width: 100%;
+
+            margin-top: 15px;
+
+        }
+
+
+        video {
+
+            width: 100%;
+
+            max-width: 750px;
+
+            display: block;
+
+            margin: 20px auto;
+
+            border-radius: 20px;
+
+            border: 1px solid #334155;
+
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .contact-card {
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+            background: rgba(15,23,42,0.7);
+
+            border: 1px solid #1e293b;
+
+            border-radius: 20px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .contact-card:hover {
+
+            transform: translateY(-5px);
+
+            border-color: #2563eb;
+
+        }
+
+
+        .contact-icon {
+
+            font-size: 35px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .contact-card h3 {
+
+            color: #60a5fa;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .contact-card p,
+        .contact-card a {
+
+            color: #94a3b8;
+
+            text-decoration: none;
+
+        }
+
+
+        .contact-card a:hover {
+
+            color: #60a5fa;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding: 35px;
+
+            text-align: center;
+
+            background: #020617;
+
+            border-top: 1px solid #1e293b;
+
+            color: #64748b;
+
+        }
+
+
+        footer strong {
+
+            color: #60a5fa;
+
+        }
+
+
+        /* =====================================================
+           BACK TO TOP
+        ===================================================== */
+
+        .top {
+
+            position: fixed;
+
+            bottom: 25px;
+
+            right: 25px;
+
+            width: 45px;
+
+            height: 45px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background: #2563eb;
+
+            color: white;
+
+            border-radius: 50%;
+
+            text-decoration: none;
+
+            box-shadow:
+                0 0 25px rgba(37,99,235,0.5);
+
+            z-index: 999;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width: 850px) {
+
+            nav ul {
+
+                border-radius: 20px;
+
+            }
+
+
+            nav a {
+
+                font-size: 11px;
+
+                padding: 7px 9px;
+
+            }
+
+
+            .about-grid,
+            .skills-grid,
+            .projects,
+            .achievements,
+            .contact {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 55px;
+
+            }
+
+
+            .info {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="#home">HOME</a>
+        </li>
+
+        <li>
+            <a href="#profil">PROFIL</a>
+        </li>
+
+        <li>
+            <a href="#kemahiran">SKILLS</a>
+        </li>
+
+        <li>
+            <a href="#pendidikan">EDUCATION</a>
+        </li>
+
+        <li>
+            <a href="#projek">PROJECTS</a>
+        </li>
+
+        <li>
+            <a href="#pengalaman">ACHIEVEMENT</a>
+        </li>
+
+        <li>
+            <a href="#kerjaya">CAREER</a>
+        </li>
+
+        <li>
+            <a href="#hubungi">CONTACT</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
+
+<section id="home">
+
+    <div class="hero">
+
+
+        <div class="hello">
+            HELLO, WELCOME TO MY PORTFOLIO
+        </div>
+
+
+        <div class="profile-wrapper">
+
+            <img
+                src="images/profile.jpg (2).jpeg"
+                class="profile"
+                alt="Gambar Profil"
+            >
+
+        </div>
+
+
+        <h1>
+            MY IT JOURNEY
+        </h1>
+
+
+        <h2>
+            Diploma Teknologi Maklumat
+        </h2>
+
+
+        <p>
+
+            Saya merupakan pelajar dalam bidang Teknologi
+            Maklumat yang mempunyai minat dalam pembelajaran 
+            tentang IT.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                href="#profil"
+                class="btn btn-primary"
+            >
+                EXPLORE MY JOURNEY →
+            </a>
+
+
+            <a
+                href="#hubungi"
+                class="btn btn-outline"
+            >
+                CONTACT ME
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="scroll">
+        ↓ SCROLL TO EXPLORE ↓
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROFIL
+===================================================== -->
+
+<section id="profil">
+
+    <div class="container">
+
+
+        <div class="title">
+
+            <span>01 — ABOUT ME</span>
+
+            <h2>Profil Diri</h2>
+
+            <p>
+                Sedikit tentang diri saya
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div class="glass about-photo">
+
+                <img
+                    src="images/profile.jpg.jpeg"
+                    alt="Profil"
+                >
+
+            </div>
+
+
+            <div class="glass about-content">
+
+                <h3>
+                    Hi, I'm Nurin 👋
+                </h3>
+
+
+                <p>
+
+                    Saya merupakan pelajar Diploma Teknologi
+                    Maklumat di Kolej Vokasional Kluang.
+                    Saya berminat untuk meneroka dunia teknologi
+                    dan menghasilkan projek digital yang kreatif,
+                    interaktif dan bermanfaat.
+
+                </p>
+
+
+                <div class="info">
+
+
+                    <div class="info-box">
+
+                        <small>NAMA</small>
+
+                        <strong>
+                            Nurin Alin Kamilah Binti Hairulnizam
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <small>PROGRAM</small>
+
+                        <strong>
+                            Diploma Teknologi Maklumat
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <small>INSTITUSI</small>
+
+                        <strong>
+                            Kolej Vokasional Kluang
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <small>MINAT</small>
+
+                        <strong>
+                            Asas Pangkalan Data & lain-lain
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <small>FOCUS</small>
+
+                        <strong>
+                            Information Technology
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section id="kemahiran">
+
+    <div class="container">
+
+
+        <div class="title">
+
+            <span>02 — MY SKILLS</span>
+
+            <h2>Kemahiran</h2>
+
+            <p>
+                Kemahiran yang sedang saya bangunkan
+            </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill">
+
+                <div class="skill-top">
+
+                    <h3>HTML</h3>
+
+                    <span>90%</span>
+
+                </div>
+
+                <div class="bar">
+
+                    <span style="width:90%"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-top">
+
+                    <h3>CSS</h3>
+
+                    <span>85%</span>
+
+                </div>
+
+                <div class="bar">
+
+                    <span style="width:85%"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-top">
+
+                    <h3>JavaScript</h3>
+
+                    <span>70%</span>
+
+                </div>
+
+                <div class="bar">
+
+                    <span style="width:70%"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-top">
+
+                    <h3>Xampp(mysql)</h3>
+
+                    <span>90%</span>
+
+                </div>
+
+                <div class="bar">
+
+                    <span style="width:90%"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-top">
+
+                    <h3>Graphic Design</h3>
+
+                    <span>75%</span>
+
+                </div>
+
+                <div class="bar">
+
+                    <span style="width:75%"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-top">
+
+                    <h3>Communication</h3>
+
+                    <span>85%</span>
+
+                </div>
+
+                <div class="bar">
+
+                    <span style="width:85%"></span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PENDIDIKAN
+===================================================== -->
+
+<section id="pendidikan">
+
+    <div class="container">
+
+
+        <div class="title">
+
+            <span>03 — EDUCATION</span>
+
+            <h2>Pendidikan & Kelayakan</h2>
+
+            <p>
+                Perjalanan pendidikan saya
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="glass">
+
+                    <h3>
+                        Diploma Teknologi Maklumat
+                    </h3>
+
+                    <p>
+                        Kolej Vokasional Kluang
+                    </p>
+
+                    <p>
+                        Bidang: Teknologi Maklumat
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="glass">
+
+                    <h3>
+                        Sijil / Kelayakan
+                    </h3>
+
+                    <p>
+                        Sijil Watikah Perlantikan MPP
+                    </p>
+
+                    <p>
+                        Sijil Dekan Ketua Jabatan
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="glass">
+
+                    <h3>
+                        Kursus & Latihan
+                    </h3>
+
+                    <p>
+                        Menyertai Program Aplikasi RPMB 4.0
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projek">
+
+    <div class="container">
+
+
+        <div class="title">
+
+            <span>04 — MY PROJECTS</span>
+
+            <h2>Projek / Hasil Kerja</h2>
+
+            <p>
+                Antara projek yang pernah dihasilkan
+            </p>
+
+        </div>
+
+
+        <div class="projects">
+
+
+            <div class="project">
+
+                <img
+                    src="images/project1.jpg"
+                    alt="Gaya Hidup Digital"
+                >
+
+
+                <div class="project-content">
+
+                    <h3>
+                        Gaya Hidup Digital
+                    </h3>
+
+                    <p>
+
+                        Projek laman web berkaitan gaya hidup
+                        digital dengan penggunaan elemen
+                        multimedia dan reka bentuk web.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project">
+
+                <img
+                    src="images/project2.jpg"
+                    alt="Sistem Mutawwif"
+                >
+
+
+                <div class="project-content">
+
+                    <h3>
+                        Sistem Pengiraan KVMART
+                    </h3>
+
+                    <p>
+
+                        Sistem berkaitan mengautomasikan proses pengiraan jualan, 
+                        mengira diskaun berdasarkan jenis kad keahlian,
+                        menghasilkan resit bayaran secara automatik dan
+                        meningkatkan kecekapan pengurusan jualan KVMART.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project">
+
+                <img
+                    src="images/project3.jpg"
+                    alt="Projek Multimedia"
+                >
+
+
+                <div class="project-content">
+
+                    <h3>
+                        Projek Smart Campus Network Design & Technology Trends Analysis
+                    </h3>
+
+                    <p>
+
+                        Projek rekabentuk rangkaian kampus 
+                        pintar menggunakan aplikasi digital.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- AUDIO -->
+
+        <div class="glass media">
+
+            <h3>
+                🎧 Audio 
+            </h3>
+
+            <p>
+                Dengarkan rakaman audio ini.
+            </p>
+
+
+            <audio controls>
+
+                <source
+                    src="audio/Hindia - Kita ke Sana (Official Lyric Video).mp3"
+                    type="audio/mpeg"
+                >
+
+            </audio>
+
+        </div>
+
+
+        <!-- VIDEO -->
+
+        <div class="glass media">
+
+            <h3>
+                🎬 Video Portfolio
+            </h3>
+
+            <p>
+                Video ringkas berkaitan My IT Journey.
+            </p>
+
+
+            <video controls>
+
+                <source
+                    src="video/WhatsApp Video 2026-09-22 at 19.16.28.mp4"
+                    type="video/mp4"
+                >
+
+            </video>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE & ACHIEVEMENT
+===================================================== -->
+
+<section id="pengalaman">
+
+    <div class="container">
+
+
+        <div class="title">
+
+            <span>05 — EXPERIENCE</span>
+
+            <h2>Pengalaman & Pencapaian</h2>
+
+            <p>
+                Aktiviti dan pengalaman saya
+            </p>
+
+
+            <div class="achievements">
+
+            <div class="achievement">
+
+                <div class="icon">
+                    🏆
+                </div>
+
+                <h3>
+                    Pertandingan Aplikasi RPMB 4.0
+                </h3>
+
+                <p>
+                    Memenangi pingat emas & gangsa.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CAREER
+===================================================== -->
+
+<section id="kerjaya">
+
+    <div class="container">
+
+
+        <div class="title">
+
+            <span>06 — FUTURE</span>
+
+            <h2>Matlamat Kerjaya</h2>
+
+            <p>
+                Perancangan masa hadapan saya
+            </p>
+
+        </div>
+
+
+        <div class="career">
+
+
+            <h3>
+                🚀 Future IT Professional
+            </h3>
+
+
+            <p>
+
+                Matlamat jangka pendek saya adalah untuk
+                meningkatkan kemahiran dalam menghasilkan 
+                projek digital yang kreatif.
+
+                <br><br>
+
+                Untuk jangka panjang, saya ingin membina
+                kerjaya profesional dalam bidang Teknologi
+                Maklumat dan menghasilkan aplikasi atau
+                sistem yang kreatif serta memberi manfaat
+                kepada pengguna.
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="hubungi">
+
+    <div class="container">
+
+
+        <div class="title">
+
+            <span>07 — CONTACT</span>
+
+            <h2>Hubungi Saya</h2>
+
+            <p>
+                Mari berhubung dengan saya
+            </p>
+
+        </div>
+
+
+        <div class="contact">
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📧
+                </div>
+
+                <h3>
+                    Email
+                </h3>
+
+                <a
+                    href="mailto:nralin08@gmail.com"
+                >
+                    nralin08@gmail.com
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Tiktok
+                </h3>
+
+                <a
+                    href="https://www.tiktok.com/@rrnmess?_r=1&_t=ZS-99m8A2R8bie"
+                    target="_blank"
+                >
+                    Tiktok Saya 👆🏻
+                </a>
+
+            </div>
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    💚
+                </div>
+
+                <h3>
+                    Whatsapp
+                </h3>
+
+                <a
+                    href="https://wa.me/60167238092"
+                    target="_blank"
+                >
+                    Whatsapp Saya 👆🏻
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="glass"
+            style="text-align:center;margin-top:25px;"
+        >
+
+            <h3 style="color:#60a5fa;">
+                Thank You For Visiting! ✨
+            </h3>
+
+            <p style="color:#94a3b8;margin-top:10px;">
+
+                Terima kasih kerana meluangkan masa
+                melihat portfolio saya.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+
+        © 2026
+        <strong>My IT Journey</strong>
+
+        | Portfolio Digital
+
+    </p>
+
+
+    <p style="margin-top:8px;">
+
+        Diploma Teknologi Maklumat |
+        Kolej Vokasional Kluang
+
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<a
+    href="#home"
+    class="top"
+>
+    ↑
+</a>
+
+
+</body>
+
+</html>
+```
